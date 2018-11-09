@@ -1,0 +1,7 @@
+configuration:
+  files:
+    crp.Rmd:
+      enabled: yes
+  objects: crp
+  render_root:
+    tmp: '176439'

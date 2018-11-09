@@ -1,0 +1,26 @@
+---
+title: "A Test Document for DataPackageR"
+author: "Greg Finak"
+output: html_document
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readxl)
+library(writexl)
+library(magrittr)
+suppressMessages(library(tidyr))
+suppressMessages(library(dplyr))
+
+ofile <- tempfile("crp", fileext = "xlsx")
+download.file("https://www.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/Conservation/Excel/CRP%20Rental%20Payment%20History%20By%20County1.xlsx?CRP+Rental+Payment+History+by+County", 
+              ofile)
+crp <- readxl::read_excel(ofile, skip = 2)[-1,] %>% 
+  tidyr::gather(key = "year", value = "crp_acres", -STATE, -COUNTY, -FIPS) %>%
+  filter(!is.na(COUNTY)) %>%
+  arrange(STATE, COUNTY, year)
+```
+
