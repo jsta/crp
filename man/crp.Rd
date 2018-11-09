@@ -4,13 +4,13 @@
 \name{crp}
 \alias{crp}
 \alias{crp-package}
-\title{Conservation Reserve Program Data}
+\title{Conservation Reserve Program data}
 \description{
-A data package for Conservation Reserve Program data.
+Conservation Reserve Program dataset
 }
 \details{
 crp
-A data package for Conservation Reserve Program data.
+Conservation Reserve Program dataset
 }
 \seealso{
 \link{crp}

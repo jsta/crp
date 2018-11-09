@@ -1,9 +1,9 @@
 ---
-title: A Test Document for DataPackageR
-author: Greg Finak
+title: Conservation Reserve Program
+author: Joseph Stachelek
 output: html_document
 vignette: >
-  %\VignetteIndexEntry{A Test Document for DataPackageR}
+  %\VignetteIndexEntry{Conservation Reserve Program}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
@@ -14,18 +14,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(readxl)
-library(writexl)
 library(magrittr)
 suppressMessages(library(tidyr))
 suppressMessages(library(dplyr))
 
-ofile <- tempfile("crp", fileext = "xlsx")
-download.file("https://www.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/Conservation/Excel/CRP%20Rental%20Payment%20History%20By%20County1.xlsx?CRP+Rental+Payment+History+by+County", 
+ofile <- file.path(DataPackageR::project_path(), "data-raw", "crp.xlsx")
+
+if(!file.exists(ofile)){
+  download.file("https://www.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/Conservation/Excel/CRP%20Rental%20Payment%20History%20By%20County1.xlsx?CRP+Rental+Payment+History+by+County", 
               ofile)
+}
+
 crp <- readxl::read_excel(ofile, skip = 2)[-1,] %>% 
   tidyr::gather(key = "year", value = "crp_acres", -STATE, -COUNTY, -FIPS) %>%
   filter(!is.na(COUNTY)) %>%
   arrange(STATE, COUNTY, year)
 ```
+
+
 
 

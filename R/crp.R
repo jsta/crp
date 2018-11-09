@@ -1,10 +1,10 @@
 #' crp
-#' A data package for Conservation Reserve Program data.
+#' Conservation Reserve Program dataset
 #' @docType package
 #' @aliases crp-package
-#' @title Conservation Reserve Program Data
+#' @title Conservation Reserve Program data
 #' @name crp
-#' @description A data package for Conservation Reserve Program data.
+#' @description Conservation Reserve Program dataset
 #' @seealso
 #' \link{crp}
 NULL
