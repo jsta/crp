@@ -5,3 +5,4 @@
 
 inst/extdata
 inst/doc/
+data-raw/*.zip
