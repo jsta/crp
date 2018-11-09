@@ -4,6 +4,8 @@ configuration:
       enabled: yes
     tillage_ctic.Rmd:
       enabled: yes
-  objects: crp
+  objects:
+  - crp
+  - tillage_ctic
   render_root:
     tmp: '176439'

@@ -12,21 +12,30 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# crp
+# macroag
 
-The goal of crp is to provide reproducible access to Conservation Reserve Program data.
+The goal of `macroag` is to provide reproducible access to agricultral data for macrosystems research.
 
 ## Installation
 
-You can install `crp` from Github with:
+You can install `macroag` from Github with:
 
 ``` r
-devtools::install_github("jsta/crp")
+devtools::install_github("jsta/macroag")
 ```
 
-## Example
+```{r }
+library(macroag)
+```
 
-```{r example}
-library(crp)
+## Conservation Reserve Program data
+
+```{r crp}
 head(crp)
+```
+
+## Conservation Tillage data
+
+```{r tillage_ctic}
+head(tillage_ctic)
 ```

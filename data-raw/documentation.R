@@ -1,10 +1,28 @@
-#' crp
-#' Conservation Reserve Program dataset
+#' macroag
+#'
 #' @docType package
-#' @aliases crp-package
-#' @title Conservation Reserve Program data
-#' @name crp
-#' @description Conservation Reserve Program dataset
+#' @aliases macroag-package
+#' @title Agricultural data for macrosystems research
+#' @name macroag
+#' @description Agricultural data for macrosystems research
 #' @seealso
-#' \link{crp}
+#' \link{macroag}
+NULL
+
+#' crp
+#'
+#' @title Conservation Reserve Program
+#' @description Data from the Conservation Reserve Program
+#' @docType data
+#' @keywords datasets
+#' @name crp
+NULL
+
+#' tillage_ctic
+#'
+#' @title Conservation tillage data
+#' @description Conservation tillage data
+#' @docType data
+#' @keywords datasets
+#' @name tillage_ctic
 NULL
