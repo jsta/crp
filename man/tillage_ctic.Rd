@@ -10,4 +10,9 @@ Conservation tillage data
 \details{
 tillage_ctic
 }
+\references{
+\url{https://water.usgs.gov/GIS/metadata/usgswrd/XML/ds573_tillage_lu01.xml}
+
+Baker, N.T. 2011. Tillage practices in the conterminous United States, 1989–2004: Datasets aggregated by watershed. U.S. Geological Survey Data Series 573. USGS, Reston, VA
+}
 \keyword{datasets}

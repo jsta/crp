@@ -10,4 +10,7 @@ Data from the Conservation Reserve Program
 \details{
 crp
 }
+\references{
+\url{https://www.fsa.usda.gov/programs-and-services/conservation-programs/reports-and-statistics/conservation-reserve-program-statistics/index}
+}
 \keyword{datasets}

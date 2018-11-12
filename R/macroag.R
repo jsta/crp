@@ -17,6 +17,8 @@ NULL
 #' @docType data
 #' @keywords datasets
 #' @name crp
+#' @references
+#' \url{https://www.fsa.usda.gov/programs-and-services/conservation-programs/reports-and-statistics/conservation-reserve-program-statistics/index}
 NULL
 
 
@@ -27,4 +29,8 @@ NULL
 #' @docType data
 #' @keywords datasets
 #' @name tillage_ctic
+#' @references
+#' \url{https://water.usgs.gov/GIS/metadata/usgswrd/XML/ds573_tillage_lu01.xml}
+#'
+#' Baker, N.T. 2011. Tillage practices in the conterminous United States, 1989–2004: Datasets aggregated by watershed. U.S. Geological Survey Data Series 573. USGS, Reston, VA
 NULL
