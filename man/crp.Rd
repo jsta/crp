@@ -12,5 +12,7 @@ crp
 }
 \references{
 \url{https://www.fsa.usda.gov/programs-and-services/conservation-programs/reports-and-statistics/conservation-reserve-program-statistics/index}
+
+Sprague, L. A., and J. A. M. Gronberg. 2012. Relating Management Practices and Nutrient Export in Agricultural Watersheds of the United States. Journal of Environment Quality 41: 1939. doi:10.2134/jeq2012.0073
 }
 \keyword{datasets}
