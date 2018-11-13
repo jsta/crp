@@ -20,3 +20,27 @@ tillage_ctic[which(nchar(tillage_ctic$huc8_n) == 7), "huc8_n"] <-
 
 write_csv(tillage_ctic, "data-raw/tillage_ctic.csv")
 devtools::use_data(tillage_ctic, overwrite = TRUE)
+
+library(xml2)
+
+# http://r-pkgs.had.co.nz/man.html
+tabular <- function(df, ...) {
+  stopifnot(is.data.frame(df))
+
+  align <- function(x) if (is.numeric(x)) "r" else "l"
+  col_align <- vapply(df, align, character(1))
+
+  cols <- lapply(df, format, ...)
+  contents <- do.call("paste",
+                      c(cols, list(sep = " \\tab ", collapse = "\\cr\n  ")))
+
+  paste("\\tabular{", paste(col_align, collapse = ""), "}{\n  ",
+        contents, "\n}\n", sep = "")
+}
+
+pg       <- read_xml("https://water.usgs.gov/GIS/metadata/usgswrd/XML/ds573_tillage_lu01.xml")
+recs     <- xml_find_all(pg, "//attr")
+metadata <- data.frame(col_names = xml_text(xml_find_all(recs[1], "//attrlabl")),
+           definition = xml_text(xml_find_all(recs[1], "//attrdef")),
+           stringsAsFactors = FALSE)
+cat(tabular(metadata))

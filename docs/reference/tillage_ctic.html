@@ -30,7 +30,7 @@
 
 <meta property="og:title" content="Conservation tillage data — tillage_ctic" />
 
-<meta property="og:description" content="Conservation tillage data" />
+<meta property="og:description" content="Conservation tillage data interpolated from counties to watersheds. Original data from the Conservation Technology Information Center. Interpolated data from Baker (2011)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -73,9 +73,6 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -104,14 +101,29 @@
 
     <div class="ref-description">
     
-    <p>Conservation tillage data</p>
+    <p>Conservation tillage data interpolated from counties to watersheds. Original data from the Conservation Technology Information Center. Interpolated data from Baker (2011).</p>
     
     </div>
 
         
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>tillage_ctic</p>
+    <table class='table'>
+<tr><td>OID</td><td>Internal feature number.</td></tr>
+<tr><td>HUC8_N</td><td>Numeric 8-digit hydrologic unit code</td></tr>
+<tr><td>crop</td><td>crop name</td></tr>
+<tr><td>year</td><td>crop planting year</td></tr>
+<tr><td>notill</td><td>No till conservation tillage, greater than 30 percent of soil covered with crop residue</td></tr>
+<tr><td>ridge</td><td>Ridge till conservation tillage, greater than 30 percent of soil covered with crop residue</td></tr>
+<tr><td>mulch</td><td>Mulch till conservation tillage, greater than 30 percent of soil covered with crop residue</td></tr>
+<tr><td>reduced</td><td>Reduced tillage (not considered conservation tillage), 15-30 percent of crop residue left on soil</td></tr>
+<tr><td>intense</td><td>Intensive or conventional tillage, less than 15 percent residue left on soil</td></tr>
+<tr><td>totacre</td><td>Total planted acres (sum of all tillage types)</td></tr>
+<tr><td>pctnotil</td><td>Percentage of no tilll acres</td></tr>
+<tr><td>pctridge</td><td>Percentage of ridge tilll acres</td></tr>
+<tr><td>pctmulch</td><td>Percentage of mulch till acres</td></tr>
+<tr><td>pctreduc</td><td>Percentage of reduced tilll acres</td></tr>
+</table>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 

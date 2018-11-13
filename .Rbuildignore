@@ -5,3 +5,5 @@ DATADIGEST
 data-raw
 datapackager.yml
 vignettes
+Makefile
+docs
