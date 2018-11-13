@@ -14,6 +14,9 @@ if(!file.exists(zip_file)){
 unzip(zip_file, exdir = "data-raw")
 
 tillage_ctic <- rio::import(dbf_file)
+tillage_ctic$huc8_n <- as.character(tillage_ctic$huc8_n)
+tillage_ctic[which(nchar(tillage_ctic$huc8_n) == 7), "huc8_n"] <-
+  paste0("0", tillage_ctic[which(nchar(tillage_ctic$huc8_n) == 7), "huc8_n"])
 
 write_csv(tillage_ctic, "data-raw/tillage_ctic.csv")
 devtools::use_data(tillage_ctic, overwrite = TRUE)
