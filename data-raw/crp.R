@@ -16,7 +16,7 @@ crp <- readxl::read_excel(ofile, skip = 2)[-1,] %>%
   tidyr::gather(key = "year", value = "crp_acres", -STATE, -COUNTY, -FIPS) %>%
   filter(!is.na(COUNTY)) %>%
   arrange(STATE, COUNTY, year) %>%
-  write_csv("crp.csv")
+  write_csv("data-raw/crp.csv")
 
-crp <- read_csv("crp.csv")
-# DataPackageR::package_build()
+crp <- read_csv("data-raw/crp.csv")
+devtools::use_data(crp, overwrite = TRUE)

@@ -1,6 +1,7 @@
 library(httr)
 library(foreign)
 library(rio)
+library(readr)
 
 base_url <- "https://water.usgs.gov/GIS/dsdl/ds573_tillage_lu01.zip"
 zip_file <- file.path(DataPackageR::project_path(), "data-raw", basename(base_url))
@@ -13,3 +14,6 @@ if(!file.exists(zip_file)){
 unzip(zip_file, exdir = "data-raw")
 
 tillage_ctic <- rio::import(dbf_file)
+
+write_csv(tillage_ctic, "data-raw/tillage_ctic.csv")
+devtools::use_data(tillage_ctic, overwrite = TRUE)
