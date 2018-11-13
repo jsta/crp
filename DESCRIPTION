@@ -12,7 +12,6 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/jsta/macroag
 BugReports: https://github.com/jsta/macroag/issues
-DataVersion: 0.1.1
 Roxygen: list(markdown = TRUE)
 Imports:
     DataPackageR
@@ -26,4 +25,3 @@ Suggests:
     magrittr
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
-Date: 2018-11-09

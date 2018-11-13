@@ -1,16 +1,3 @@
----
-title: tillage
-vignette: >
-  %\VignetteIndexEntry{tillage}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
----
-
-```{r include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r }
 library(httr)
 library(foreign)
 library(rio)
@@ -26,5 +13,3 @@ if(!file.exists(zip_file)){
 unzip(zip_file, exdir = "data-raw")
 
 tillage_ctic <- rio::import(dbf_file)
-```
-

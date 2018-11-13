@@ -10,6 +10,7 @@
 NULL
 
 
+
 #' crp
 #'
 #' @title Conservation Reserve Program
@@ -22,6 +23,7 @@ NULL
 #'
 #' Sprague, L. A., and J. A. M. Gronberg. 2012. Relating Management Practices and Nutrient Export in Agricultural Watersheds of the United States. Journal of Environment Quality 41: 1939. doi:10.2134/jeq2012.0073
 NULL
+
 
 
 #' tillage_ctic
