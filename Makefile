@@ -1,4 +1,6 @@
 
+all: data-raw
+
 data-raw: data-raw/tillage_ctic.csv data-raw/crp.csv
 
 data-raw/tillage_ctic.csv: data-raw/tillage_ctic.R
