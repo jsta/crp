@@ -1,7 +1,9 @@
+# ---- setup ----
 library(httr)
 library(foreign)
 library(rio)
 library(readr)
+library(dplyr)
 
 base_url <- "https://water.usgs.gov/GIS/dsdl/ds573_tillage_lu01.zip"
 zip_file <- file.path(DataPackageR::project_path(), "data-raw", basename(base_url))
@@ -14,13 +16,17 @@ if(!file.exists(zip_file)){
 unzip(zip_file, exdir = "data-raw")
 
 tillage_ctic <- rio::import(dbf_file)
+
+# ---- cleanup ----
 tillage_ctic$huc8_n <- as.character(tillage_ctic$huc8_n)
 tillage_ctic[which(nchar(tillage_ctic$huc8_n) == 7), "huc8_n"] <-
   paste0("0", tillage_ctic[which(nchar(tillage_ctic$huc8_n) == 7), "huc8_n"])
 
+# ---- saving ----
 write_csv(tillage_ctic, "data-raw/tillage_ctic.csv")
 devtools::use_data(tillage_ctic, overwrite = TRUE)
 
+# ---- metadata ----
 library(xml2)
 
 # http://r-pkgs.had.co.nz/man.html
